@@ -1,1 +1,22 @@
+#Show the employee's first_name and last_name, a "num_orders" column with a count of the orders taken, and a column called "Shipped" that displays "On Time" 
+# if the order shipped_date is less or equal to the required_date, "Late" if the order shipped late. Order by employee last_name, then by first_name, and then descending by number of orders.
 
+# Solution
+SELECT employees.first_name,
+		employees.last_name,
+        count (orders.order_id) as num_orders,
+        (
+          Case 
+          when orders.shipped_date <= orders.required_date then "On Time"
+          else "Late"
+          End
+          ) as shipped 
+from orders join employees on employees.employee_id = orders.employee_id
+group by 
+	employees.first_name,
+    employees.last_name,
+    shipped
+order by
+	employees.last_name,
+    employees.first_name,
+    num_orders desc
