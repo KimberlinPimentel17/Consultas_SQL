@@ -1,4 +1,4 @@
-Introducción al Proyecto: Consultas SQL
+Consultas SQL
 
 En este proyecto, he enfocado mis esfuerzos en perfeccionar y demostrar mis habilidades en consultas SQL, un aspecto fundamental en el análisis y gestión de datos. La capacidad de extraer información precisa y relevante de grandes conjuntos de datos es crucial en cualquier entorno empresarial o de análisis de datos. 
 
